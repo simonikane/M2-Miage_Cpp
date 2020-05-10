@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.cpp
+Image.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
+Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.cpp
+Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.cpp
+Iris.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
+Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/main.cpp
+iostream
+-
+
