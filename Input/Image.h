@@ -10,10 +10,11 @@
 
 class Image: public Input{
     public:
-        Image(int i);//constructeur indice i correspondant à l'indice de l'image
-        double operator[](int i);//Renvoie le niveau de gris du pixel correspondant
+        Image(int indice);//constructeur indice i correspondant à l'indice de l'image
+        double operator[](int pixel);//Renvoie le niveau de gris du pixel correspondant
         //get_label deja utilisé dans Input même signature donc pas bésoin de le redefinir
     private:
+        char pixel[28][28];
 
 };
 

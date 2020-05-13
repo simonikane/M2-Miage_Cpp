@@ -13,13 +13,13 @@
 #include <iostream>
 
 class Iris: public Input{
-    public:
-        Iris(int indice);//charge la description de la fleur et son label
-        double operator[](int i);
-        std::vector<std::string> split(std::string chaine, char delimit); //pour recupérer les 4 reel de chaque iris
+public:
+    Iris(int indice);//charge la description de la fleur et son label
+    double operator[](int i);
+    std::vector<std::string> split(std::string chaine, char delimit); //pour recupérer les 4 reel de chaque iris
 
-    private:
-        double description[4];
+private:
+    double description[4];
 };
 
 

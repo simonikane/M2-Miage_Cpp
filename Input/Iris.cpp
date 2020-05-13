@@ -4,7 +4,8 @@
 #include "Iris.h"
 #include <iostream>
 #include <fstream>
-
+#include <sstream>
+#include <vector>
 using namespace std;
 
 vector<std::string> Iris::split(std::string chaine, char delimit) {
@@ -23,11 +24,12 @@ vector<std::string> Iris::split(std::string chaine, char delimit) {
  * @param indice
  */
 Iris::Iris(int indice) :Input() {
-    string pathFolder = "C:\\Users\\DiKeLa M'Babane\\Documents\\M2IF DAUPHINE\\M2-C++\\M2-Miage_Cpp\\Data_Source\\iris_training\\iris_training\\";
+    //string pathFolder = "C:\\Users\\DiKeLa M'Babane\\Documents\\M2IF DAUPHINE\\M2-C++\\M2-Miage_Cpp\\Data_Source\\iris_training\\";
+    string pathFolder = "C:\\Users\\33652\\Downloads\\Cours 2019-2020\\C++\\Projet\\M2-Miage_Cpp\\Data_Source\\iris_training\\";
+
     string strIris = pathFolder.append("iris");
 
     string filePath   = strIris.append(to_string(indice));
-    cout<<filePath;//
 
     ifstream irisFile(filePath);
     if (irisFile){
@@ -36,21 +38,21 @@ Iris::Iris(int indice) :Input() {
             char c = ',';
             vector<string> myVector = this->split(ligne, c);
             int sizeVec = myVector.size();
-            cout<<"\n"<<sizeVec<<"\n";
             this->set_label(myVector.at(sizeVec - 1));
-            cout<<this->get_label()<<"\n";
-
+            // cout << "\n";
            for (int i = 0; i < (sizeVec - 1); i++) {
                 this->description[i] = stod(myVector.at(i));
-                cout<<this->description[i]<<"\n";
+                // cout<<this->description[i]<<",";
             }
+            // cout<<this->get_label();
+
         } else{
             cerr<<"ERREUR";
         }
 
     } else{
 
-        cerr<<"ERREUR : impossible d'ouvrire le fichier";
+        cerr<<"ERREUR : impossible d'ouvrir le fichier " << filePath << "\n";
     }
     irisFile.close();
 
