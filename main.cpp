@@ -25,17 +25,28 @@ int main() {
     for (int indiceImage = 0; indiceImage < 1; indiceImage++) {
         Image newImage(indiceImage);
         image_vector.push_back(newImage);
+/*        std::cout << "Label : " << static_cast<unsigned>(image_vector.at(indiceImage).get_label()) << "\n";
+        for(int i=0;i<700; i++){
+            std::cout << "Nuance de gris du " << i << "eme pixel/indice : " << image_vector.at(indiceImage)[i] << "\n";
+        }*/ // print
     }
-    // Afficher les données du vecteur Iris
-/*    for (int i = 0; i < NB_IRIS; i++) {
-        for (int indice_description = 0; indice_description < 3; indice_description++) {
+    // Afficher les données du vecteur d'Iris
+    for (int i = 0; i < NB_IRIS; i++) {
+        for (int indice_description = 0; indice_description < 4; indice_description++) {
             std::cout << iris_vector.at(i)[indice_description] << ",";
         }
-        std::cout<<iris_vector.at(i).get_label()<<"\n";
-    }*/
+        std::cout << static_cast<unsigned>(iris_vector.at(i).get_label())
+                  << "\n"; // on fait un static_cast pour transformer la valeur acsii inconnue en vraie valeur
+    }
 
-
-
-
+    // Afficher les données du vecteur d'Images
+    /*
+    for (int indiceImage = 18; indiceImage < 19; indiceImage++) {
+        std::cout << "Label : " << static_cast<unsigned>(image_vector.at(indiceImage).get_label()) << "\n";
+        for(int i=0;i<700; i++){
+            std::cout << "Nuance de gris du " << i << "eme pixel/indice : " << image_vector.at(indiceImage)[i] << "\n";
+        } // print
+    }
+    */
     return 0;
 }

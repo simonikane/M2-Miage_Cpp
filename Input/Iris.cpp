@@ -34,7 +34,14 @@ Iris::Iris(int indice) :Input() {
             char c = ',';
             vector<string> myVector = this->split(ligne, c);
             int sizeVec = myVector.size();
-            this->set_label(myVector.at(sizeVec - 1));
+            // Iris setosa (label 0), Iris virginica (label 1) and Iris versicolor (label 2).
+            if (!myVector.at(sizeVec - 1).compare("Iris-setosa")) {
+                this->set_label(0);
+            } else if (!myVector.at(sizeVec - 1).compare("Iris-virginica")) {
+                this->set_label(1);
+            } else if (!myVector.at(sizeVec - 1).compare("Iris-versicolor")) {
+                this->set_label(2);
+            }
             // cout << "\n";
             for (int i = 0; i < (sizeVec - 1); i++) {
                 this->description[i] = stod(myVector.at(i));

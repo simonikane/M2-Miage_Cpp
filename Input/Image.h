@@ -18,7 +18,7 @@ public:
     double operator[](int pixel) override;//Renvoie le niveau de gris du pixel correspondant
     //get_label deja utilisé dans Input même signature donc pas bésoin de le redefinir
 private:
-    char pixel[28][28]; // image composée de 28*28 pixels compris entre 0 et 255
+    char pixel[28][28]; // image composée de 28*28 pixels (nuances de gris) compris entre 0 et 255
 };
 
 #endif //PROJET_CPP_IMAGE_H

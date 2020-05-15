@@ -6,25 +6,33 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.cpp
-Image.h
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
-iostream
--
-fstream
--
-typeinfo
--
-sstream
--
-vector
--
-
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
 Input.h
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
 
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
 string
+-
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
+Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+string
+-
+vector
+-
+sstream
+-
+iostream
+-
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/main.cpp
+iostream
+-
+Input/Iris.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
+Input/Image.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
+vector
 -
 

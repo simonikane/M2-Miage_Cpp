@@ -8,16 +8,18 @@
 
 #include <string>
 
-class Input{
-    public:
-        Input();
-        virtual double operator[](int i) = 0;// permet d'accéder à une valeur du tableau
-        std::string get_label();// Renvoie le label de l'input
-        void set_label(std::string label);
-        ~Input();
+class Input {
+public:
+    Input();
 
-    private:
-        std::string label;// le label de l'input
+    virtual double operator[](int i) = 0;// permet d'accéder à une valeur du tableau
+    char get_label();// Renvoie le label de l'input
+    void set_label(char label);
+
+    ~Input();
+
+private:
+    char label;// le label de l'input
 };
 
 
