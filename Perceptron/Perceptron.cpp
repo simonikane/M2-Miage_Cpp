@@ -4,27 +4,26 @@
 
 #include "Perceptron.h"
 
-Perceptron::Perceptron(int inputSize, Fonction_activation *funcActivation, char labelPerceptron) {
-    //initialisation des poids de manière aléatoire ( {-1, 1})
+Perceptron::Perceptron(int inpuSize, Fonction_activation *funcActivation, char labelPerceptron) {
 
 }
 
 double Perceptron::get_poids(int indice) {
-    return this->poids.at(indice);
+    return 0;
 }
 
 double Perceptron::forward(Input &input) {
     return 0;
 }
 
-double Perceptron::calcul_delta(Input &input) {
+double Perceptron::calcul_delta(Input input) {
     return 0;
 }
 
 double Perceptron::get_delta() {
-    return this->delta;
+    return 0;
 }
 
-void Perceptron::backprop(Input &input, double mu) {
+void Perceptron::backprop(Input &input) {
 
 }
