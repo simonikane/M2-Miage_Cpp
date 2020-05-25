@@ -3,3 +3,7 @@
 //
 
 #include "Fonction_activation.h"
+
+/*double Fonction_activation::operator()() {
+    return 0;
+}*/

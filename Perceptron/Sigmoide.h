@@ -4,10 +4,13 @@
 
 #ifndef PROJET_CPP_SIGMOIDE_H
 #define PROJET_CPP_SIGMOIDE_H
+#include "Fonction_activation.h"
 
-
-class Sigmoide {
-
+class Sigmoide: public Fonction_activation {
+    public:
+        double prim(double val);
+        double operator()(double val) override;
+    private:
 };
 
 

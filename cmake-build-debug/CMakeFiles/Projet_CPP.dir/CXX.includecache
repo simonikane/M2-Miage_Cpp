@@ -6,33 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
-Input.h
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
-
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Input/Input.h
 string
 -
 
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
-Input.h
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
-string
--
-vector
--
-sstream
--
-iostream
--
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Fonction_activation.h
 
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/main.cpp
-iostream
--
-Input/Iris.h
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
-Input/Image.h
-C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
-vector
--
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.cpp
+Perceptron.h
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.h
+
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.h
+Fonction_activation.h
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+../Input/Input.h
+C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Input/Input.h
 

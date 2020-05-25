@@ -6,7 +6,26 @@
 #define PROJET_CPP_PERCEPTRON_H
 
 
+#include "Fonction_activation.h"
+#include "../Input/Input.h"
+#include <vector>
+
 class Perceptron {
+
+    private:
+        char label;// avant c'etait categorie
+        std::vector<double> poids;
+        double sigma;
+        Fonction_activation * activation;
+        double delta; //>> sigma
+
+    public:
+        Perceptron(int inputSize, Fonction_activation * funcActivation, char labelPerceptron);
+        double get_poids(int indice);
+        double forward(Input& input);
+        double calcul_delta(Input & input);
+        double get_delta();
+        void backprop(Input &input, double mu);// Definition du poids
 
 };
 

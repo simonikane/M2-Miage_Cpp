@@ -4,9 +4,18 @@
 
 #ifndef PROJET_CPP_TANH_H
 #define PROJET_CPP_TANH_H
+#include "Fonction_activation.h"
 
+/***
+ * Cette classe permet de calculer la tangente
+ */
+class Tanh : public Fonction_activation{
 
-class Tanh {
+    private:
+    public:
+        Tanh();
+        double operator()(double val);
+        double prim(double val);
 
 };
 

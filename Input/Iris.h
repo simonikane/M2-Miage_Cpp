@@ -12,7 +12,7 @@
 #include <sstream>
 #include <iostream>
 
-class Iris: public Input{
+class Iris: public Input, public std::error_code {
 public:
     Iris(int indice);//charge la description de la fleur et son label
     double operator[](int i);
