@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Input/Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
 string
 -
 
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
 
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.cpp
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.cpp
 Perceptron.h
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Perceptron.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 Fonction_activation.h
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
 ../Input/Input.h
-C:/Users/DiKeLa M'Babane/Documents/M2IF DAUPHINE/M2-C++/M2-Miage_Cpp/Input/Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+vector
+-
 

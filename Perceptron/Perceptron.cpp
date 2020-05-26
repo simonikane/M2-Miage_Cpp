@@ -16,7 +16,7 @@ double Perceptron::forward(Input &input) {
     return 0;
 }
 
-double Perceptron::calcul_delta(Input input) {
+double Perceptron::calcul_delta(Input &input) {
     return 0;
 }
 
@@ -24,6 +24,6 @@ double Perceptron::get_delta() {
     return 0;
 }
 
-void Perceptron::backprop(Input &input) {
+void Perceptron::backprop(Input &input, double mu) {
 
 }

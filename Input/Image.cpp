@@ -8,6 +8,8 @@
 #include <typeinfo>
 #include <sstream>
 #include <vector>
+#include <bitset>
+#include <cmath>
 
 using namespace std;
 
@@ -25,18 +27,14 @@ Image::Image(int indice) : Input() {
         char buffer[784]; // 28 * 28 = 784 pixels
         imageFile.seekg(1078, ios::beg);
         imageFile.read(buffer, 784); // mettre les octets dans buffer[].. montrer pour 785
-        /*
-        cout << "\nReading imageFile bytes...\n";
-        for (int i=0; i<784; i++) {
-            cout << buffer[i] << "\n";
-        } */        // à montrer à Laye et Sim
-        // cout << "\nThe number of bytes read is " << imageFile.gcount();
 
+        cout << "\nThe number of bytes read is " << imageFile.gcount();
         int compteurPixel = 0;
         for (int i = 0; i < 28; i++) {
             for (int j = 0; j < 28; j++) {
                 this->pixel[i][j] = buffer[compteurPixel];
-                //cout << "\n buffer compteur pixel" << static_cast<unsigned>(buffer[compteurPixel]);
+                cout << "\n" << static_cast<signed>(buffer[compteurPixel]);
+                // cout << "\n" << std::bitset<8>(buffer[compteurPixel]);
                 compteurPixel++;
             }
         }
@@ -76,4 +74,3 @@ double Image::operator[](int indice) {
     // cout << "\nIndice Lignes : " << indiceLignes << ", Indice Colonnes : " << indiceColonnes << "\n";
     return (double) this->pixel[indiceLignes][indiceColonnes];
 }
-

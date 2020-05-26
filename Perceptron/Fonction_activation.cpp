@@ -4,6 +4,6 @@
 
 #include "Fonction_activation.h"
 
-/*double Fonction_activation::operator()() {
+double Fonction_activation::operator()(double val) {
     return 0;
-}*/
+}

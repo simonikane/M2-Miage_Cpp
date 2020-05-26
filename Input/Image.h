@@ -7,14 +7,11 @@
 
 #include "Input.h"
 
-const std::string PROJECT_FOLDER_PATH = R"(C:\Users\33652\Downloads\Cours 2019-2020\C++\Projet\M2-Miage_Cpp\)";
-const int NB_IRIS = 150;
-const int NB_TRAINING = 60000;
 
 
 class Image : public Input {
 public:
-    explicit Image(int indice);//constructeur indice i correspondant à l'indice de l'image
+    Image(int indice);//constructeur indice i correspondant à l'indice de l'image -> Image(0) correspond à training0
     double operator[](int pixel) override;//Renvoie le niveau de gris du pixel correspondant
     //get_label deja utilisé dans Input même signature donc pas bésoin de le redefinir
 private:

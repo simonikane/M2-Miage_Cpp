@@ -12,7 +12,7 @@ Tanh::Tanh() {
 
 double Tanh::prim(double val) {
     //Calcul de la tangente
-    double tanh = (exp(val) - exp(- val))/(exp(val) + exp(- val));
+    double tanh = (exp(val) - exp(-val)) / (exp(val) + exp(-val));
     //la derivé de la tangente
     double tanhPrime = 1 - pow(tanh, 2);
     return tanhPrime;
@@ -21,23 +21,3 @@ double Tanh::prim(double val) {
 double Tanh::operator()(double val) {
     return this->prim(val);
 }
-
-#include <math.h>
-
-using namespace std;
-
-Tanh::Tanh() {
-}
-
-double Tanh::prim(double val) {
-    //Calcul de la tangente
-    double tanh = (exp(val) - exp(- val))/(exp(val) + exp(- val));//la tangente
-    //la derivé de la tangente
-    double tanhPrime = 1 - pow(tanh, 2);//derivée
-    return tanhPrime;
-}
-
-double Tanh::operator()(double val) {
-    return this->prim(val);
-}
-
