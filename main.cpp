@@ -1,10 +1,42 @@
 #include <iostream>
 #include "Input/Iris.h"
 #include "Input/Image.h"
+#include "Perceptron/Fonction_activation.h"
+#include "Perceptron/Tanh.h"
+#include "Perceptron/Sigmoide.h"
+#include "Perceptron/Perceptron.h"
 #include <vector>
+
+void test();
+
+void printInputs();
+
+void testPerceptron();
+
 using namespace std;
 
 int main() {
+    // printInputs();
+    testPerceptron();
+    return 0;
+}
+
+void testPerceptron() {
+    Tanh *tanh = new Tanh();
+    Perceptron *perceptron = new Perceptron(4, tanh, 1);
+    Input *iris = new Iris(121);
+
+
+    cout << "\n";
+    perceptron->calcul_delta(*iris);
+    cout << "result forward : " << perceptron->forward(*iris) << "\n";
+    cout << "calcul_delta : " << perceptron->get_delta();
+
+
+}
+
+void printInputs() {
+
     std::cout << "--------------------- M2 MASTER MIAGE IF - RESEAU DE NEURONES ---------------------\n";
     std::cout << "Project Path Folder : " << PROJECT_FOLDER_PATH << "\n";
     std::cout << "\n--------------------- Import des Images et des Iris ---------------------\n";
@@ -20,11 +52,11 @@ int main() {
     }
 
 /*    for (int i = 0; i < iris_vector.size(); i++) {
-        for (int j = 0; j < 4; j++) {
-            std::cout <<" Iris  " << i << "  "<< iris_vector.at(i)[j]<<"\n";
-        }
-        cout<<"Pour l'iris  "<< i << "  Le label correspondant est "<<iris_vector.at(i).get_label()<<"\n";
-    }*/
+    for (int j = 0; j < 4; j++) {
+        std::cout <<" Iris  " << i << "  "<< iris_vector.at(i)[j]<<"\n";
+    }
+    cout<<"Pour l'iris  "<< i << "  Le label correspondant est "<<iris_vector.at(i).get_label()<<"\n";
+}*/
 
     // Rajouter les training0, training1, [...] training59999 au vecteur d'Images
     for (int indiceImage = 0; indiceImage < 2; indiceImage++) {
@@ -53,5 +85,4 @@ int main() {
         } // print
     }
 
-    return 0;
 }

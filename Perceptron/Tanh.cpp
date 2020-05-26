@@ -19,5 +19,7 @@ double Tanh::prim(double val) {
 }
 
 double Tanh::operator()(double val) {
-    return this->prim(val);
+    double tanh = (exp(val) - exp(-val)) / (exp(val) + exp(-val));
+    return tanh;
+
 }

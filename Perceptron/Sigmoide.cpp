@@ -13,5 +13,6 @@ double Sigmoide::prim(double val) {
 }
 
 double Sigmoide::operator()(double val) {
-    return this->prim(val);
+    double fi = 1 / (1 + exp(-val));
+    return fi;
 }

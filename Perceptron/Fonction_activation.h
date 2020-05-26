@@ -13,6 +13,7 @@ class Fonction_activation {
     public:
         virtual double operator()(double val) = 0;
         virtual double prim(double val) = 0;
+
 };
 
 
