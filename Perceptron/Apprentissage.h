@@ -39,7 +39,7 @@ void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double
         randNum = rand() % nbInput;
         //input1 = new classInput(randNum);
         input1 = new classInput(randNum);
-        std::cout << "iteration " << i << "\n";
+        // std::cout << "iteration " << i << "\n";
         this->reseauNeurones->apprentissage(*input1, mu);
     }
 }
@@ -56,12 +56,10 @@ int Apprentissage<classInput, nbInput>::evaluer() {
         back = reseauNeurones->evaluation(*in);
         //if (in->get_label() == reseauNeurones->evaluation(*in)) {
         if (old == back) {
-            //std::cout << "in->get_label() : " << in->get_label() << "|| reseauNeurones->evaluation(*in) : "
-            //        << static_cast<unsigned>(reseauNeurones->evaluation(*in)) << "\n";
             nbCorrectInput++;
         }
         std::cout << "old " << static_cast<unsigned>(old) << " || back : " << static_cast<unsigned>(back) << "\n";
-//        std::cout << (old == back);
+
     }
     return nbCorrectInput;
 }

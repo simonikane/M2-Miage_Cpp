@@ -6,6 +6,7 @@
 #include "NN1.h"
 #include "Perceptron.h"
 #include "Tanh.h"
+#include "Sigmoide.h"
 
 /**
  *
@@ -13,7 +14,7 @@
  * @param nbCategories le nombre de catégories et donc le nombre de perceptrons
  */
 NN1::NN1(int inputSize, int nbCategories) {
-    Fonction_activation *fonctionActivation = new Tanh();
+    Fonction_activation *fonctionActivation = new Sigmoide();
     this->inputSize = inputSize;
     this->nbCategories = nbCategories;
     for (int i = 0; i < nbCategories; i++) {
@@ -27,10 +28,11 @@ NN1::NN1(int inputSize, int nbCategories) {
  * @return le label correspoindant à la plus grande valeur retournée par l'un des perceptrons
  */
 char NN1::evaluation(Input &input) {
-    double max = 0;
+    double max = -1;
     char labelMax = 0;
     for (int i = 0; i < reseauNeurones.size(); i++) {
         double newForward = reseauNeurones.at(i).forward(input);
+        std::cout << "perceptron " << i << "|| newForward " << newForward << "\n";
         if (newForward > max) {
             max = newForward;
             labelMax = i;

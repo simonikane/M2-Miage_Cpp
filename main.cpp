@@ -35,8 +35,10 @@ void testPerceptron() {
 //    cout << "calcul_delta : " << perceptron->get_delta();
     NN1 *reseau = new NN1(4, 3);
     Apprentissage<Iris, 150> apprentissage(reseau);
-    apprentissage.apprendre_base(15, 0.1);
-    std::cout << "\n Nombre de bons : " << apprentissage.evaluer();
+    apprentissage.apprendre_base(500, 0.1);
+    int nombreCorrect = apprentissage.evaluer();
+    std::cout << "\nNombre de bons : " << nombreCorrect << " || " << "Pourcentage de correct : "
+              << nombreCorrect / 150.0 * 100 << "% de correct";
 
 
 
