@@ -21,19 +21,19 @@ Image::Image(int indice) : Input() {
 
     // Partie traitement des data training
     ifstream imageFile(training_filePath, ios::in | ios::binary);
-    std::cout << training_filePath;
+    // std::cout << training_filePath;
     if (imageFile) {
         // cout << "\nSuccessfully opened file training" << to_string(indice);
         char buffer[784]; // 28 * 28 = 784 pixels
         imageFile.seekg(1078, ios::beg);
         imageFile.read(buffer, 784); // mettre les octets dans buffer[].. montrer pour 785
 
-        cout << "\nThe number of bytes read is " << imageFile.gcount();
+        // cout << "\nThe number of bytes read is " << imageFile.gcount();
         int compteurPixel = 0;
         for (int i = 0; i < 28; i++) {
             for (int j = 0; j < 28; j++) {
                 this->pixel[i][j] = buffer[compteurPixel];
-                cout << "\n" << static_cast<signed>(buffer[compteurPixel]);
+                // cout << "\n" << static_cast<signed>(buffer[compteurPixel]);
                 // cout << "\n" << std::bitset<8>(buffer[compteurPixel]);
                 compteurPixel++;
             }
@@ -54,7 +54,6 @@ Image::Image(int indice) : Input() {
     ifstream train_labelsFile(train_labels_filePath, ios::in | ios::binary);
 
     if (train_labelsFile) {
-        cout << "\n";
         char buffer[1]; // 28 * 28 = 784 pixels
         train_labelsFile.seekg(8 + indice, ios::beg); // on se positionne au 8ème octet
         train_labelsFile.read(buffer,

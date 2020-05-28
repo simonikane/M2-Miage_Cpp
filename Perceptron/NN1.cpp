@@ -27,13 +27,13 @@ NN1::NN1(int inputSize, int nbCategories) {
  * @return le label correspoindant à la plus grande valeur retournée par l'un des perceptrons
  */
 char NN1::evaluation(Input &input) {
-    double newForward = 0, max = -1;
+    double max = 0;
     char labelMax = 0;
     for (int i = 0; i < reseauNeurones.size(); i++) {
-        newForward = reseauNeurones.at(i).forward(input);
+        double newForward = reseauNeurones.at(i).forward(input);
         if (newForward > max) {
             max = newForward;
-            labelMax = (char) i;
+            labelMax = i;
         }
     }
     return labelMax;

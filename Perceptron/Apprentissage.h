@@ -32,15 +32,15 @@ Apprentissage<input, nbInput>::Apprentissage(NN1 *reseau) {
 
 template<class classInput, int nbInput>
 void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double mu) {
-    int min = 0, max = nbInput;
     int randNum = 0;
-    //Input input1;
-    Iris *iris1;
-    for (int i = 0; i < nbInput; i++) {
-        randNum = rand() % (max - min + 1) + min;
+    Input *input1;
+    //Iris *iris1;
+    for (int i = 0; i < nbIterations; i++) {
+        randNum = rand() % nbInput;
         //input1 = new classInput(randNum);
-        iris1 = new Iris(i);
-        this->reseauNeurones->apprentissage(*iris1, mu);
+        input1 = new classInput(randNum);
+        std::cout << "iteration " << i << "\n";
+        this->reseauNeurones->apprentissage(*input1, mu);
     }
 }
 
@@ -48,13 +48,20 @@ template<class classInput, int nbInput>
 int Apprentissage<classInput, nbInput>::evaluer() {
     int nbCorrectInput = 0;
     Input *in;
+
+    char old, back;
     for (int i = 0; i < nbInput; i++) {
         in = new classInput(i);
-        if (in->get_label() == reseauNeurones->evaluation(*in)) {
+        old = in->get_label();
+        back = reseauNeurones->evaluation(*in);
+        //if (in->get_label() == reseauNeurones->evaluation(*in)) {
+        if (old == back) {
+            //std::cout << "in->get_label() : " << in->get_label() << "|| reseauNeurones->evaluation(*in) : "
+            //        << static_cast<unsigned>(reseauNeurones->evaluation(*in)) << "\n";
             nbCorrectInput++;
         }
-        std::cout << "in->get_label() : " << in->get_label() << "|| reseauNeurones->evaluation(*in) : "
-                  << static_cast<unsigned>(reseauNeurones->evaluation(*in)) << "\n";
+        std::cout << "old " << static_cast<unsigned>(old) << " || back : " << static_cast<unsigned>(back) << "\n";
+//        std::cout << (old == back);
     }
     return nbCorrectInput;
 }

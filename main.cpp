@@ -8,6 +8,7 @@
 #include "Perceptron/NN1.h"
 #include "Perceptron/Apprentissage.h"
 #include <vector>
+#include <ctime>
 
 void printInputs();
 
@@ -17,6 +18,7 @@ using namespace std;
 
 int main() {
     // printInputs();
+    srand(time(NULL));
     testPerceptron();
     return 0;
 }
@@ -33,10 +35,16 @@ void testPerceptron() {
 //    cout << "calcul_delta : " << perceptron->get_delta();
     NN1 *reseau = new NN1(4, 3);
     Apprentissage<Iris, 150> apprentissage(reseau);
-    apprentissage.apprendre_base(11000, 0.1);
-
-    apprentissage.evaluer();
+    apprentissage.apprendre_base(15, 0.1);
     std::cout << "\n Nombre de bons : " << apprentissage.evaluer();
+
+
+
+//    NN1 *reseau2 = new NN1(784, 10);
+//    Apprentissage<Image, 60000> apprentissageImage(reseau2);
+//    apprentissageImage.apprendre_base(100000, 1);
+//    std::cout << "\n Nombre de bons : " << apprentissageImage.evaluer();
+
 }
 
 void printInputs() {

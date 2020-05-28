@@ -5,6 +5,7 @@
 #include "Perceptron.h"
 #include <cstdlib>
 #include <iostream>
+#include <time.h>
 
 /**
  * @param inputSize la taille de l'input (ex: 4 pour les fleurs, 784 pour les images)
@@ -18,9 +19,7 @@ Perceptron::Perceptron(int inputSize, Fonction_activation *funcActivation, char 
         randNum = rand() % (max - min + 1) + min;
         this->poids.push_back(randNum);
     }
-
-    for (int i = 0; i < this->poids.size(); ++i)
-        std::cout << this->poids.at(i) << ' ';
+    std::cout << "\n";
 
     this->activation = funcActivation;
     this->label = labelPerceptron;
