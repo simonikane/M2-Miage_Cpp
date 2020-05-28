@@ -38,6 +38,7 @@ double Perceptron::forward(Input &input) {
     for (int i = 1; i < this->poids.size(); i++) {
         produitScalaire += input[i] * this->poids.at(i); // somme des xi * wi
     }
+
     resultForward = this->activation->operator()(produitScalaire); // phi(w0+somme des xi*wi)
     return resultForward;
 }
@@ -51,7 +52,6 @@ double Perceptron::calcul_delta(Input &input) {
         produitScalaire += input[i] * this->poids.at(i); // somme des xi * wi
     }
 
-    std::cout << "produitScalaire : " << produitScalaire << "\n";
     result1 = this->activation->prim(produitScalaire); // phi'(w0+somme des xi*wi)
 
     calculDelta = result1 * (forward(input) - input.get_label());
@@ -65,6 +65,7 @@ double Perceptron::get_delta() {
 }
 
 void Perceptron::backprop(Input &input, double mu) {
+    this->calcul_delta(input);
     this->poids[0] = this->poids[0] - mu * get_delta();
     for (int i = 1; i < this->poids.size(); i++) {
         this->poids[i] = this->poids[i] - mu * input[i] * get_delta();

@@ -15,13 +15,9 @@ const int NB_TRAINING = 60000;
 
 class Input {
 public:
-    Input();
-
     virtual double operator[](int i) = 0;// permet d'accéder à une valeur du tableau
     char get_label();// Renvoie le label de l'input
     void set_label(char label);
-
-    ~Input();
 
 private:
     char label;// le label de l'input

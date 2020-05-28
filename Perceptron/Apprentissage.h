@@ -32,7 +32,6 @@ Apprentissage<input, nbInput>::Apprentissage(NN1 *reseau) {
 
 template<class classInput, int nbInput>
 void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double mu) {
-    std::cout << "before the drama";
     int min = 0, max = nbInput;
     int randNum = 0;
     //Input input1;
@@ -48,13 +47,14 @@ void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double
 template<class classInput, int nbInput>
 int Apprentissage<classInput, nbInput>::evaluer() {
     int nbCorrectInput = 0;
-    Input input1;
-
+    Input *in;
     for (int i = 0; i < nbInput; i++) {
-        if (classInput(i)->get_label() == reseauNeurones->evaluation(input1)) {
+        in = new classInput(i);
+        if (in->get_label() == reseauNeurones->evaluation(*in)) {
             nbCorrectInput++;
         }
-
+        std::cout << "in->get_label() : " << in->get_label() << "|| reseauNeurones->evaluation(*in) : "
+                  << static_cast<unsigned>(reseauNeurones->evaluation(*in)) << "\n";
     }
     return nbCorrectInput;
 }

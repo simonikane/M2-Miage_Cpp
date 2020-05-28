@@ -5,14 +5,6 @@
 #include "Input.h"
 #include <string>
 
-Input::Input() {
-
-}
-
-Input::~Input() {
-
-}
-
 char Input::get_label() {
     return this->label;
 }

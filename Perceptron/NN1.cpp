@@ -5,6 +5,7 @@
 #include <iostream>
 #include "NN1.h"
 #include "Perceptron.h"
+#include "Tanh.h"
 
 /**
  *
@@ -12,7 +13,7 @@
  * @param nbCategories le nombre de catégories et donc le nombre de perceptrons
  */
 NN1::NN1(int inputSize, int nbCategories) {
-    Fonction_activation *fonctionActivation = nullptr;
+    Fonction_activation *fonctionActivation = new Tanh();
     this->inputSize = inputSize;
     this->nbCategories = nbCategories;
     for (int i = 0; i < nbCategories; i++) {

@@ -29,7 +29,8 @@ public:
     double calcul_delta(Input &input);
 
     double get_delta();
-        void backprop(Input &input, double mu);// Definition du poids
+
+    void backprop(Input &input, double mu);// Definition du poids
 
 };
 

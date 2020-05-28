@@ -20,6 +20,7 @@ CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj: ../Perceptron/Fonction_activat
 CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj: ../Perceptron/NN1.cpp
 CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj: ../Perceptron/NN1.h
 CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj: ../Perceptron/Perceptron.h
+CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj: ../Perceptron/Tanh.h
 
 CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron.cpp.obj: ../Input/Input.h
 CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron.cpp.obj: ../Perceptron/Fonction_activation.h

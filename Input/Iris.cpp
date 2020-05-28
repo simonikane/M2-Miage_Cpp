@@ -24,7 +24,8 @@ vector<std::string> Iris::split(std::string chaine, char delimit) {
  * @param indice
  */
 Iris::Iris(int indice) :Input() {
-    //string pathFolder = "C:\\Users\\DiKeLa M'Babane\\Documents\\M2IF DAUPHINE\\M2-C++\\M2-Miage_Cpp\\Data_Source\\iris_training\\";
+    //string pathFolder = "C:\\Users\\DiKeLa M'B
+    // abane\\Documents\\M2IF DAUPHINE\\M2-C++\\M2-Miage_Cpp\\Data_Source\\iris_training\\";
     string pathFolder = "C:\\Users\\33652\\Downloads\\Cours 2019-2020\\C++\\Projet\\M2-Miage_Cpp\\Data_Source\\iris_training\\";
     string filePath = pathFolder.append("iris" + to_string(indice));
     ifstream irisFile(filePath);

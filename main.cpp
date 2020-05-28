@@ -33,11 +33,10 @@ void testPerceptron() {
 //    cout << "calcul_delta : " << perceptron->get_delta();
     NN1 *reseau = new NN1(4, 3);
     Apprentissage<Iris, 150> apprentissage(reseau);
-    std::cout << "before the drama";
-    apprentissage.apprendre_base(1000, 0.1);
+    apprentissage.apprendre_base(11000, 0.1);
 
-    // apprentissage.evaluer();
-    // cout << apprentissage.evaluer();
+    apprentissage.evaluer();
+    std::cout << "\n Nombre de bons : " << apprentissage.evaluer();
 }
 
 void printInputs() {
