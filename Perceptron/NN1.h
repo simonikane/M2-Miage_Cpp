@@ -12,9 +12,7 @@
 class NN1 {
 public:
     NN1(int inputSize, int nbCategories);
-
     char evaluation(Input &input);
-
     void apprentissage(Input &input, double mu);
 
 
