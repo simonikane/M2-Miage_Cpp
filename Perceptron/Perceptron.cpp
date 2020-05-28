@@ -14,7 +14,7 @@
 Perceptron::Perceptron(int inputSize, Fonction_activation *funcActivation, char labelPerceptron) {
     int min = -1, max = 1;
     int randNum = 0;
-    for (int i = 0; i < inputSize; i++) {
+    for (int i = 0; i < inputSize + 1; i++) {
         randNum = rand() % (max - min + 1) + min;
         this->poids.push_back(randNum);
     }

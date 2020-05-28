@@ -230,6 +230,33 @@ Perceptron/Fonction_activation.cpp.s:
 	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Fonction_activation.cpp.s
 .PHONY : Perceptron/Fonction_activation.cpp.s
 
+Perceptron/NN1.obj: Perceptron/NN1.cpp.obj
+
+.PHONY : Perceptron/NN1.obj
+
+# target to build an object file
+Perceptron/NN1.cpp.obj:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj
+.PHONY : Perceptron/NN1.cpp.obj
+
+Perceptron/NN1.i: Perceptron/NN1.cpp.i
+
+.PHONY : Perceptron/NN1.i
+
+# target to preprocess a source file
+Perceptron/NN1.cpp.i:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.i
+.PHONY : Perceptron/NN1.cpp.i
+
+Perceptron/NN1.s: Perceptron/NN1.cpp.s
+
+.PHONY : Perceptron/NN1.s
+
+# target to generate assembly for a file
+Perceptron/NN1.cpp.s:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.s
+.PHONY : Perceptron/NN1.cpp.s
+
 Perceptron/Perceptron.obj: Perceptron/Perceptron.cpp.obj
 
 .PHONY : Perceptron/Perceptron.obj
@@ -359,6 +386,9 @@ help:
 	@echo ... Perceptron/Fonction_activation.obj
 	@echo ... Perceptron/Fonction_activation.i
 	@echo ... Perceptron/Fonction_activation.s
+	@echo ... Perceptron/NN1.obj
+	@echo ... Perceptron/NN1.i
+	@echo ... Perceptron/NN1.s
 	@echo ... Perceptron/Perceptron.obj
 	@echo ... Perceptron/Perceptron.i
 	@echo ... Perceptron/Perceptron.s

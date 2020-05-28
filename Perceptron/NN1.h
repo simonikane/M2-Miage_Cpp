@@ -7,16 +7,21 @@
 
 
 #include "../Input/Input.h"
+#include "Perceptron.h"
 
 class NN1 {
 public:
-    NN1(int intSize, int nbCategories);
+    NN1(int inputSize, int nbCategories);
 
     char evaluation(Input &input);
 
     void apprentissage(Input &input, double mu);
 
+
 private:
+    int inputSize = 0;
+    int nbCategories = 0;
+    std::vector<Perceptron> reseauNeurones;
 };
 
 

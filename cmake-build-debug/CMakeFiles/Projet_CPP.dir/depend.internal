@@ -15,6 +15,12 @@ CMakeFiles/Projet_CPP.dir/Input/Iris.cpp.obj
 CMakeFiles/Projet_CPP.dir/Perceptron/Fonction_activation.cpp.obj
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.cpp
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN1.cpp
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN1.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron.cpp.obj
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
@@ -32,4 +38,10 @@ CMakeFiles/Projet_CPP.dir/main.cpp.obj
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Image.h
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Iris.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Apprentissage.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN1.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Sigmoide.h
+ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Tanh.h
  C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/main.cpp

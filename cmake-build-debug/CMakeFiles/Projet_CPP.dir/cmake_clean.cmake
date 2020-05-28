@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Projet_CPP.dir/Input/Input.cpp.obj"
   "CMakeFiles/Projet_CPP.dir/Input/Iris.cpp.obj"
   "CMakeFiles/Projet_CPP.dir/Perceptron/Fonction_activation.cpp.obj"
+  "CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.obj"
   "CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron.cpp.obj"
   "CMakeFiles/Projet_CPP.dir/Perceptron/Sigmoide.cpp.obj"
   "CMakeFiles/Projet_CPP.dir/Perceptron/Tanh.cpp.obj"
