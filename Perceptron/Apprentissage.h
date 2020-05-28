@@ -32,22 +32,23 @@ Apprentissage<input, nbInput>::Apprentissage(NN1 *reseau) {
 
 template<class classInput, int nbInput>
 void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double mu) {
+    std::cout << "before the drama";
     int min = 0, max = nbInput;
     int randNum = 0;
-    Input input1;
-
-    for (int i = 0; i < nbIterations; i++) {
+    //Input input1;
+    Iris *iris1;
+    for (int i = 0; i < nbInput; i++) {
         randNum = rand() % (max - min + 1) + min;
-        input1 = new classInput(randNum);
-        this->reseauNeurones->apprentissage(input1, mu);
+        //input1 = new classInput(randNum);
+        iris1 = new Iris(i);
+        this->reseauNeurones->apprentissage(*iris1, mu);
     }
 }
 
 template<class classInput, int nbInput>
 int Apprentissage<classInput, nbInput>::evaluer() {
     int nbCorrectInput = 0;
-    Input
-            input1;
+    Input input1;
 
     for (int i = 0; i < nbInput; i++) {
         if (classInput(i)->get_label() == reseauNeurones->evaluation(input1)) {
