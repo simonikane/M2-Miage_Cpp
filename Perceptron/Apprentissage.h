@@ -7,31 +7,33 @@
 
 
 #include "NN1.h"
+#include "NN2.h"
+
 /**
  *
  * @tparam Input Iris ou Image
  * @tparam nbInput 150 pour Iris et 60 000 pour Images
  */
-template<class Input, int nbInput>
+template<class Input, int nbInput, class NN>
 class Apprentissage {
 public:
-    Apprentissage(NN1 *reseau);
+    Apprentissage(NN *reseau);
 
     void apprendre_base(int nbIterations, double mu);
 
     int evaluer();
 
 private:
-    NN1 *reseauNeurones;
+    NN *reseauNeurones;
 };
 
-template<class input, int nbInput>
-Apprentissage<input, nbInput>::Apprentissage(NN1 *reseau) {
+template<class input, int nbInput, class NN>
+Apprentissage<input, nbInput, NN>::Apprentissage(NN *reseau) {
     this->reseauNeurones = reseau;
 }
 
-template<class classInput, int nbInput>
-void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double mu) {
+template<class classInput, int nbInput, class NN>
+void Apprentissage<classInput, nbInput, NN>::apprendre_base(int nbIterations, double mu) {
     int randNum = 0;
     Input *input1;
     //Iris *iris1;
@@ -44,22 +46,21 @@ void Apprentissage<classInput, nbInput>::apprendre_base(int nbIterations, double
     }
 }
 
-template<class classInput, int nbInput>
-int Apprentissage<classInput, nbInput>::evaluer() {
+template<class classInput, int nbInput, class NN>
+int Apprentissage<classInput, nbInput, NN>::evaluer() {
     int nbCorrectInput = 0;
     Input *in;
 
-    char old, back;
+    char inputLabel, predictedLabel;
     for (int i = 0; i < nbInput; i++) {
         in = new classInput(i);
-        old = in->get_label();
-        back = reseauNeurones->evaluation(*in);
+        inputLabel = in->get_label();
+        predictedLabel = reseauNeurones->evaluation(*in);
         //if (in->get_label() == reseauNeurones->evaluation(*in)) {
-        if (old == back) {
+        if (inputLabel == predictedLabel) {
             nbCorrectInput++;
         }
-        std::cout << "old " << static_cast<unsigned>(old) << " || back : " << static_cast<unsigned>(back) << "\n";
-
+        // std::cout << "old " << static_cast<unsigned>(old) << " || back : " << static_cast<unsigned>(back) << "\n";
     }
     return nbCorrectInput;
 }

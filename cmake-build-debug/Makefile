@@ -230,6 +230,33 @@ Perceptron/Fonction_activation.cpp.s:
 	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Fonction_activation.cpp.s
 .PHONY : Perceptron/Fonction_activation.cpp.s
 
+Perceptron/Input_intermediaire.obj: Perceptron/Input_intermediaire.cpp.obj
+
+.PHONY : Perceptron/Input_intermediaire.obj
+
+# target to build an object file
+Perceptron/Input_intermediaire.cpp.obj:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Input_intermediaire.cpp.obj
+.PHONY : Perceptron/Input_intermediaire.cpp.obj
+
+Perceptron/Input_intermediaire.i: Perceptron/Input_intermediaire.cpp.i
+
+.PHONY : Perceptron/Input_intermediaire.i
+
+# target to preprocess a source file
+Perceptron/Input_intermediaire.cpp.i:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Input_intermediaire.cpp.i
+.PHONY : Perceptron/Input_intermediaire.cpp.i
+
+Perceptron/Input_intermediaire.s: Perceptron/Input_intermediaire.cpp.s
+
+.PHONY : Perceptron/Input_intermediaire.s
+
+# target to generate assembly for a file
+Perceptron/Input_intermediaire.cpp.s:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Input_intermediaire.cpp.s
+.PHONY : Perceptron/Input_intermediaire.cpp.s
+
 Perceptron/NN1.obj: Perceptron/NN1.cpp.obj
 
 .PHONY : Perceptron/NN1.obj
@@ -257,6 +284,33 @@ Perceptron/NN1.cpp.s:
 	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN1.cpp.s
 .PHONY : Perceptron/NN1.cpp.s
 
+Perceptron/NN2.obj: Perceptron/NN2.cpp.obj
+
+.PHONY : Perceptron/NN2.obj
+
+# target to build an object file
+Perceptron/NN2.cpp.obj:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN2.cpp.obj
+.PHONY : Perceptron/NN2.cpp.obj
+
+Perceptron/NN2.i: Perceptron/NN2.cpp.i
+
+.PHONY : Perceptron/NN2.i
+
+# target to preprocess a source file
+Perceptron/NN2.cpp.i:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN2.cpp.i
+.PHONY : Perceptron/NN2.cpp.i
+
+Perceptron/NN2.s: Perceptron/NN2.cpp.s
+
+.PHONY : Perceptron/NN2.s
+
+# target to generate assembly for a file
+Perceptron/NN2.cpp.s:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/NN2.cpp.s
+.PHONY : Perceptron/NN2.cpp.s
+
 Perceptron/Perceptron.obj: Perceptron/Perceptron.cpp.obj
 
 .PHONY : Perceptron/Perceptron.obj
@@ -283,6 +337,33 @@ Perceptron/Perceptron.s: Perceptron/Perceptron.cpp.s
 Perceptron/Perceptron.cpp.s:
 	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron.cpp.s
 .PHONY : Perceptron/Perceptron.cpp.s
+
+Perceptron/Perceptron_cachee.obj: Perceptron/Perceptron_cachee.cpp.obj
+
+.PHONY : Perceptron/Perceptron_cachee.obj
+
+# target to build an object file
+Perceptron/Perceptron_cachee.cpp.obj:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron_cachee.cpp.obj
+.PHONY : Perceptron/Perceptron_cachee.cpp.obj
+
+Perceptron/Perceptron_cachee.i: Perceptron/Perceptron_cachee.cpp.i
+
+.PHONY : Perceptron/Perceptron_cachee.i
+
+# target to preprocess a source file
+Perceptron/Perceptron_cachee.cpp.i:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron_cachee.cpp.i
+.PHONY : Perceptron/Perceptron_cachee.cpp.i
+
+Perceptron/Perceptron_cachee.s: Perceptron/Perceptron_cachee.cpp.s
+
+.PHONY : Perceptron/Perceptron_cachee.s
+
+# target to generate assembly for a file
+Perceptron/Perceptron_cachee.cpp.s:
+	$(MAKE) -f CMakeFiles\Projet_CPP.dir\build.make CMakeFiles/Projet_CPP.dir/Perceptron/Perceptron_cachee.cpp.s
+.PHONY : Perceptron/Perceptron_cachee.cpp.s
 
 Perceptron/Sigmoide.obj: Perceptron/Sigmoide.cpp.obj
 
@@ -386,12 +467,21 @@ help:
 	@echo ... Perceptron/Fonction_activation.obj
 	@echo ... Perceptron/Fonction_activation.i
 	@echo ... Perceptron/Fonction_activation.s
+	@echo ... Perceptron/Input_intermediaire.obj
+	@echo ... Perceptron/Input_intermediaire.i
+	@echo ... Perceptron/Input_intermediaire.s
 	@echo ... Perceptron/NN1.obj
 	@echo ... Perceptron/NN1.i
 	@echo ... Perceptron/NN1.s
+	@echo ... Perceptron/NN2.obj
+	@echo ... Perceptron/NN2.i
+	@echo ... Perceptron/NN2.s
 	@echo ... Perceptron/Perceptron.obj
 	@echo ... Perceptron/Perceptron.i
 	@echo ... Perceptron/Perceptron.s
+	@echo ... Perceptron/Perceptron_cachee.obj
+	@echo ... Perceptron/Perceptron_cachee.i
+	@echo ... Perceptron/Perceptron_cachee.s
 	@echo ... Perceptron/Sigmoide.obj
 	@echo ... Perceptron/Sigmoide.i
 	@echo ... Perceptron/Sigmoide.s

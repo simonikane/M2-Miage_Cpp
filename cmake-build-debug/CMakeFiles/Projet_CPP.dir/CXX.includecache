@@ -29,6 +29,8 @@ iostream
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Apprentissage.h
 NN1.h
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN1.h
+NN2.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN2.h
 
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
 
@@ -38,6 +40,14 @@ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
 Perceptron.h
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/NN2.h
+vector
+-
+../Input/Input.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
+Perceptron_cachee.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron_cachee.h
+
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 Fonction_activation.h
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonction_activation.h
@@ -45,6 +55,10 @@ C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Fonc
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Input/Input.h
 vector
 -
+
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron_cachee.h
+Perceptron.h
+C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Perceptron.h
 
 C:/Users/33652/Downloads/Cours 2019-2020/C++/Projet/M2-Miage_Cpp/Perceptron/Sigmoide.h
 Fonction_activation.h

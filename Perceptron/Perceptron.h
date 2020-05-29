@@ -15,9 +15,10 @@ class Perceptron {
 
 private:
     char label;// avant c'était categorie
-    std::vector<double> poids;
-    Fonction_activation *activation;
     double delta;
+protected:
+    std::vector<double> poids;
+    Fonction_activation *fonction_activation;
 
 public:
     Perceptron(int inputSize, Fonction_activation *funcActivation, char labelPerceptron);

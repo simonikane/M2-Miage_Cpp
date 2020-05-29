@@ -17,6 +17,7 @@ void testPerceptron();
 using namespace std;
 
 int main() {
+    std::cout << "--------------------- M2 MASTER MIAGE IF - RESEAU DE NEURONES ---------------------\n";
     // printInputs();
     srand(time(NULL));
     testPerceptron();
@@ -33,28 +34,30 @@ void testPerceptron() {
 //    perceptron->calcul_delta(*iris);
 //    cout << "result forward : " << perceptron->forward(*iris) << "\n";
 //    cout << "calcul_delta : " << perceptron->get_delta();
+
+
+// NN1
     NN1 *reseau = new NN1(4, 3);
-    Apprentissage<Iris, 150> apprentissage(reseau);
-    apprentissage.apprendre_base(500, 0.1);
+    Apprentissage<Iris, 150, NN1> apprentissage(reseau);
+
+    apprentissage.apprendre_base(1000, 0.01);
     int nombreCorrect = apprentissage.evaluer();
-    std::cout << "\nNombre de bons : " << nombreCorrect << " || " << "Pourcentage de correct : "
+    std::cout << "Nombre de bons : " << nombreCorrect << " || " << "Pourcentage de correct : "
               << nombreCorrect / 150.0 * 100 << "% de correct";
 
 
-
+// NN2
 //    NN1 *reseau2 = new NN1(784, 10);
-//    Apprentissage<Image, 60000> apprentissageImage(reseau2);
-//    apprentissageImage.apprendre_base(100000, 1);
-//    std::cout << "\n Nombre de bons : " << apprentissageImage.evaluer();
-
+//    Apprentissage<Image, 60000, NN1> apprentissageImage(reseau2);
+//    apprentissageImage.apprendre_base(10000, 1);
+//    int nombreCorrect2 = apprentissage.evaluer();
+//    std::cout << "\nNombre de bons : " << nombreCorrect2 << " || " << "Pourcentage de correct : "
+//              << nombreCorrect2 / 150.0 * 100 << "% de correct";
 }
 
 void printInputs() {
-
-    std::cout << "--------------------- M2 MASTER MIAGE IF - RESEAU DE NEURONES ---------------------\n";
     std::cout << "Project Path Folder : " << PROJECT_FOLDER_PATH << "\n";
     std::cout << "\n--------------------- Import des Images et des Iris ---------------------\n";
-
     // Création du vecteur contenant les données Iris
     std::vector<Iris> iris_vector;
     std::vector<Image> image_vector;
