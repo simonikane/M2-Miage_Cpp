@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <iostream>
 #include <time.h>
+#include <typeinfo>
+#include <cstring>
 
 /**
  * @param inputSize la taille de l'input (ex: 4 pour les fleurs, 784 pour les images)
@@ -31,12 +33,9 @@ double Perceptron::get_poids(int indice) {
 
 double Perceptron::forward(Input &input) {
     double produitScalaire = this->poids.at(0), resultForward = 0; // y = w0
-
-    for (int i = 1; i < this->poids.size(); i++) {
-        // std::cout << "\n" << this->poids.at(i);
-        produitScalaire += input[i] * this->poids.at(i); // y = w0 + somme des xi * wi
+    for (int i = 1; i < this->poids.size() - 1; i++) {
+        produitScalaire += input[i - 1] * this->poids.at(i); // y = w0 + somme des xi * wi
     }
-
     resultForward = this->fonction_activation->operator()(produitScalaire); // y = phi(w0+somme des xi*wi)
     return resultForward;
 }
@@ -44,16 +43,12 @@ double Perceptron::forward(Input &input) {
 double Perceptron::calcul_delta(Input &input) {
     double calculDelta = 0;
     double produitScalaire = this->poids.at(0), result1 = 0;
-
-    for (int i = 1; i < this->poids.size(); i++) {
+    for (int i = 1; i < this->poids.size() - 1; i++) {
         produitScalaire += input[i] * this->poids.at(i); // somme des xi * wi
     }
-
     result1 = this->fonction_activation->prim(produitScalaire); // phi'(w0+somme des xi*wi)
-
     calculDelta = result1 * (forward(input) - input.get_label());
     this->delta = calculDelta;
-
     return calculDelta;
 }
 
@@ -64,7 +59,9 @@ double Perceptron::get_delta() {
 void Perceptron::backprop(Input &input, double mu) {
     calcul_delta(input);
     this->poids[0] = this->poids[0] - mu * get_delta();
-    for (int i = 1; i < this->poids.size(); i++) {
+    for (int i = 1; i < this->poids.size() - 1; i++) {
         this->poids[i] = this->poids[i] - mu * input[i] * get_delta();
     }
+
+
 }

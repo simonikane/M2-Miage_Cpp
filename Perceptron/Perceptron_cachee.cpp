@@ -10,18 +10,19 @@ Perceptron_cachee::Perceptron_cachee(int inputSize, Fonction_activation *fonctio
                                      std::vector<Perceptron *> pPerceptronsCoucheSortie) : Perceptron(inputSize,
                                                                                                       fonctionActivation,
                                                                                                       labelPerceptron) {
-    this->pPerceptronsCoucheSortie = std::move(pPerceptronsCoucheSortie);
+    this->pPerceptronsCoucheSortie = pPerceptronsCoucheSortie;
 }
 
 double Perceptron_cachee::calcul_delta(Input &input) {
     double calculDelta = 0;
-    double produitScalaire = get_poids(0), result1 = 0;
-    for (int i = 1; i < poids.size(); i++) {
-        produitScalaire += poids.at(i) * input[i - 1];
+    double produitScalaire = get_poids(0), result1 = 0; // deltaS = wS0
+    for (int i = 1; i < poids.size() - 1; i++) {
+        produitScalaire += poids.at(i) * input[i - 1]; // delta = wS0 + somme des wSi * xi
     }
-    produitScalaire = fonction_activation->prim(produitScalaire);
+    produitScalaire = fonction_activation->prim(produitScalaire); // delta = phi(wS0 + somme des wSi * xi)
     double produitScalaire2 = 0;
-    for (int j = 0; j < pPerceptronsCoucheSortie.size(); j++) {
+    for (int j = 1; j < pPerceptronsCoucheSortie.size(); j++) {
+        // somme des deltaL * les poids
         produitScalaire2 +=
                 (*pPerceptronsCoucheSortie.at(j)).get_delta() * (*pPerceptronsCoucheSortie.at(j)).get_poids(j);
     }
