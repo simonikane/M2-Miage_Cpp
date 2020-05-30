@@ -18,7 +18,7 @@ Perceptron::Perceptron(int inputSize, Fonction_activation *funcActivation, char 
     int min = -1, max = 1;
     int randNum = 0;
     for (int i = 0; i < inputSize + 1; i++) {
-        randNum = rand() % (max - min + 1) + min;
+        randNum = rand() % (max - min + 1) + min; // -1 0 ou 1
         this->poids.push_back(randNum);
     }
     this->fonction_activation = funcActivation;
@@ -34,9 +34,10 @@ double Perceptron::get_poids(int indice) {
 double Perceptron::forward(Input &input) {
     double produitScalaire = this->poids.at(0), resultForward = 0; // y = w0
     for (int i = 1; i < this->poids.size() - 1; i++) {
-        produitScalaire += input[i - 1] * this->poids.at(i); // y = w0 + somme des xi * wi
+        produitScalaire += input[i] * this->poids.at(i); // y = w0 + somme des xi * wi
     }
     resultForward = this->fonction_activation->operator()(produitScalaire); // y = phi(w0+somme des xi*wi)
+    // resultForward = resultForward < 0.5 ? 0 : 1;
     return resultForward;
 }
 
@@ -49,6 +50,7 @@ double Perceptron::calcul_delta(Input &input) {
     result1 = this->fonction_activation->prim(produitScalaire); // phi'(w0+somme des xi*wi)
     calculDelta = result1 * (forward(input) - input.get_label());
     this->delta = calculDelta;
+    // calculDelta = calculDelta < 0.5 ? 0 : 1;
     return calculDelta;
 }
 
@@ -58,10 +60,8 @@ double Perceptron::get_delta() {
 
 void Perceptron::backprop(Input &input, double mu) {
     calcul_delta(input);
-    this->poids[0] = this->poids[0] - mu * get_delta();
-    for (int i = 1; i < this->poids.size() - 1; i++) {
-        this->poids[i] = this->poids[i] - mu * input[i] * get_delta();
+    for (int i = 0; i < this->poids.size() - 1; i++) {
+        this->poids[i] = (i == 0) ? this->poids[i] - mu * get_delta() : this->poids[i] = this->poids[i] -
+                                                                                         mu * input[i] * get_delta();
     }
-
-
 }

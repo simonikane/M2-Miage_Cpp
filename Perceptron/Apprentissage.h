@@ -57,7 +57,7 @@ int Apprentissage<classInput, nbInput, NN>::evaluer() {
         if (inputLabel == predictedLabel) {
             nbCorrectInput++;
         }
-        // std::cout << "old " << static_cast<unsigned>(old) << " || back : " << static_cast<unsigned>(back) << "\n";
+        // std::cout << "inputLabel " << static_cast<unsigned>(inputLabel) << " || predictedLabel : " << static_cast<unsigned>(predictedLabel) << "\n";
     }
     return nbCorrectInput;
 }

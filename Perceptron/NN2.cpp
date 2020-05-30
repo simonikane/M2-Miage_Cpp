@@ -32,6 +32,7 @@ char NN2::evaluation(Input &input) {
     for (int i = 0; i < coucheCachee.size(); i++) {
         inputIntermediaire.add(coucheCachee.at(i).forward(input));
     }
+
     for (int j = 0; j < coucheSortie.size(); j++) {
         double newForward = coucheSortie.at(j)->forward(inputIntermediaire);
         if (newForward > max) {
@@ -56,7 +57,7 @@ void NN2::apprentissage(Input &input, double mu) {
 
     // Calcul du DeltaL des perceptrons de la couche de sortie
     for (int j = 0; j < coucheSortie.size(); j++) {
-        // coucheSortie.at(j)->calcul_delta(inputIntermediaire);
+        coucheSortie.at(j)->calcul_delta(inputIntermediaire);
     }
     // Calcul du DeltaS des perceptrons de la couche de sortie
     for (int k = 0; k < coucheCachee.size(); k++) {

@@ -17,9 +17,12 @@ double Perceptron_cachee::calcul_delta(Input &input) {
     double calculDelta = 0;
     double produitScalaire = get_poids(0), result1 = 0; // deltaS = wS0
     for (int i = 1; i < poids.size() - 1; i++) {
-        produitScalaire += poids.at(i) * input[i - 1]; // delta = wS0 + somme des wSi * xi
+        produitScalaire += poids.at(i) * input[i]; // delta = wS0 + somme des wSi * xi
     }
     produitScalaire = fonction_activation->prim(produitScalaire); // delta = phi(wS0 + somme des wSi * xi)
+
+
+
     double produitScalaire2 = 0;
     for (int j = 1; j < pPerceptronsCoucheSortie.size(); j++) {
         // somme des deltaL * les poids
@@ -31,8 +34,9 @@ double Perceptron_cachee::calcul_delta(Input &input) {
 }
 
 void Perceptron_cachee::backprop(Input &input, double mu) {
-    poids.at(0) = poids.at(0) - mu * get_delta();
+    calcul_delta(input);
     for (int i = 1; i < poids.size(); i++) {
-        poids.at(i) = poids.at(i) - mu * get_delta() * input[i - 1];
+        this->poids[i] = (i == 0) ? this->poids[i] - mu * get_delta() : this->poids[i] = this->poids[i] -
+                                                                                         mu * input[i] * get_delta();
     }
 }
