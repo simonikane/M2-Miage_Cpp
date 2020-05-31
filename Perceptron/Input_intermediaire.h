@@ -1,6 +1,6 @@
 //
 // Created by CRYSTA on 29/05/2020.
-//
+//Sert à stocker la valeur des inputs intermédiaires évalués
 
 #ifndef PROJET_CPP_INPUT_INTERMEDIAIRE_H
 #define PROJET_CPP_INPUT_INTERMEDIAIRE_H

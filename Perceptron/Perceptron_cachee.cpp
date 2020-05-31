@@ -1,10 +1,15 @@
 //
 // Created by CRYSTA on 29/05/2020.
-//
+// Permet de définir la structure d'un perceptron multicouche avec couche cachée
 
 #include "Perceptron_cachee.h"
 
-#include <utility>
+/** @brief Constructeur du perceptron avec couche cachée
+   @param int inputSize : Taille de l'input
+   @param Fonction_activation *fonctionActivation : la fonction d'activation qu'on décide d'utiliser (Sigmoide ou Tanh)
+   @param char labelPerceptron : Le label du perceptron associé
+   @param vector<Perceptron *> pPerceptronsCoucheSortie : l'emplacement de sortie de ces perceptrons (va servir d'entrée à la couche suivante)
+   @return bool : valeur de retour */
 
 Perceptron_cachee::Perceptron_cachee(int inputSize, Fonction_activation *fonctionActivation, char labelPerceptron,
                                      std::vector<Perceptron *> pPerceptronsCoucheSortie) : Perceptron(inputSize,
@@ -13,6 +18,9 @@ Perceptron_cachee::Perceptron_cachee(int inputSize, Fonction_activation *fonctio
     this->pPerceptronsCoucheSortie = pPerceptronsCoucheSortie;
 }
 
+/** @brief Evaluation de la fonction 𝛿(1) = 𝜑′ (𝑧(1)) ∑𝑟 𝛿(2)𝑤(2) = 𝜑′ (𝑤(1) + ∑𝑛 𝑤(1)𝑥 ) ∑𝑟 𝛿(2)𝑤(2)
+   @param Input &input : L'input en entrée (Iris ou Image)
+   @return bool : valeur de retour */
 double Perceptron_cachee::calcul_delta(Input &input) {
     double calculDelta = 0;
     double produitScalaire = get_poids(0), result1 = 0; // deltaS = wS0
@@ -32,6 +40,12 @@ double Perceptron_cachee::calcul_delta(Input &input) {
     calculDelta = produitScalaire * produitScalaire2;
     return calculDelta;
 }
+
+
+/** @brief Va apprendre les poids à partir des inputs en training
+ * @param input : l'input choisi en entrée
+ * @param mu : pas du gradient
+ */
 
 void Perceptron_cachee::backprop(Input &input, double mu) {
     calcul_delta(input);

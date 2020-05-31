@@ -1,6 +1,6 @@
 //
 // Created by DiKeLa M'Babane on 21/05/2020.
-//
+// Permet de définir la structure d'un Perceptron
 
 #ifndef PROJET_CPP_PERCEPTRON_H
 #define PROJET_CPP_PERCEPTRON_H
@@ -14,7 +14,7 @@
 class Perceptron {
 
 private:
-    char label;// avant c'était categorie
+    char label;
     double delta;
 protected:
     std::vector<double> poids;

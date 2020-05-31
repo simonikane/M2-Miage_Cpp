@@ -1,6 +1,6 @@
 //
 // Created by CRYSTA on 29/05/2020.
-//
+// Version améliorée du réseau de neurones NN1. Rajout d'une couche intermédiaire .
 
 #ifndef PROJET_CPP_NN2_H
 #define PROJET_CPP_NN2_H

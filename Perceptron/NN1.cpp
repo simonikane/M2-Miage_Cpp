@@ -1,5 +1,7 @@
 //
 // Created by CRYSTA on 27/05/2020.
+// Partie 3 du projet
+// Permet de représenter un réseau de neurones sans multicouche cachée (classique)
 //
 
 #include <iostream>
@@ -24,8 +26,9 @@ NN1::NN1(int inputSize, int nbCategories) {
 }
 
 /**
- * @param input l'input
- * @return le label correspoindant à la plus grande valeur retournée par l'un des perceptrons
+ * @brief La fonction d'évaluation permet d'assimilier un input à un label. Cette methode renvoie la correspondance à un label (valeur entre 0 et 1)
+ * @param Input input : l'input en entrée
+ * @return char: le label correspondant à la plus grande valeur retournée par l'un des perceptrons
  */
 char NN1::evaluation(Input &input) {
     double max = -1;
@@ -44,7 +47,9 @@ char NN1::evaluation(Input &input) {
 }
 
 /**
- * application de l'algorithme d'apprentissage pour l'input
+ * @brief de l'algorithme d'apprentissage pour l'input
+ * @param Input : l'input en entrée
+ * @param double : pas du gradient
  */
 void NN1::apprentissage(Input &input, double mu) {
     for (Perceptron perceptron : reseauNeurones)

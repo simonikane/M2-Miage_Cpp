@@ -1,5 +1,6 @@
 //
 // Created by CRYSTA on 10/05/2020.
+// Permet de s'occuper de la gestion des Iris (créer un Iris a partir du dataset "iris_training")
 //
 
 #ifndef PROJET_CPP_IRIS_H

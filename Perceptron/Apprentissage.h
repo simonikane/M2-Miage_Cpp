@@ -1,6 +1,8 @@
 //
 // Created by CRYSTA on 27/05/2020.
-//
+//Méthode qui permet l'apprentissage en utilisant deux types de réseau de neurones :
+// NN1 réseau de neurones sans couche cachée
+// NN2 réseau de neurones multicouche avec couche cachée
 
 #ifndef PROJET_CPP_APPRENTISSAGE_H
 #define PROJET_CPP_APPRENTISSAGE_H
@@ -10,9 +12,8 @@
 #include "NN2.h"
 
 /**
- *
- * @tparam Input Iris ou Image
- * @tparam nbInput 150 pour Iris et 60 000 pour Images
+ * @tparam Input : Iris ou Image
+ * @tparam nbInput : 150 pour Iris et 60 000 pour Images
  */
 template<class Input, int nbInput, class NN>
 class Apprentissage {
@@ -57,7 +58,6 @@ int Apprentissage<classInput, nbInput, NN>::evaluer() {
         if (inputLabel == predictedLabel) {
             nbCorrectInput++;
         }
-        // std::cout << "inputLabel " << static_cast<unsigned>(inputLabel) << " || predictedLabel : " << static_cast<unsigned>(predictedLabel) << "\n";
     }
     return nbCorrectInput;
 }

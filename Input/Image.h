@@ -1,12 +1,12 @@
 //
 // Created by CRYSTA on 10/05/2020.
+// La classe Image s'occupe de représenter une image depuis le dataset "MNIST_training
 //
 
 #ifndef PROJET_CPP_IMAGE_H
 #define PROJET_CPP_IMAGE_H
 
 #include "Input.h"
-
 
 
 class Image : public Input {

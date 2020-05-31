@@ -1,6 +1,6 @@
 //
 // Created by CRYSTA on 29/05/2020.
-//
+// Version améliorée du réseau de neurones NN1. Rajout d'une couche intermédiaire .
 
 #include <iostream>
 #include "NN2.h"
@@ -8,10 +8,10 @@
 #include "Input_intermediaire.h"
 
 /**
- *
- * @param inputSize ex: 784
- * @param nbCategories ex: 3
- * @param nbPerceptrons ex: 3
+ * @brief Constructeur de la classe
+ * @param int inputSize : ex: 784
+ * @param int nbCategories :  ex: 3
+ * @param int nbPerceptrons : ex: 3
  */
 NN2::NN2(int inputSize, int nbCategories, int nbPerceptronsCaches) {
     Fonction_activation *fonctionActivation = new Sigmoide();
@@ -24,6 +24,12 @@ NN2::NN2(int inputSize, int nbCategories, int nbPerceptronsCaches) {
         this->coucheCachee.push_back(perceptron_cachee);
     }
 }
+
+/**
+ * @brief La fonction d'évaluation permet d'assimilier un input à un label. Cette methode renvoie la correspondance à un label (valeur entre 0 et 1)
+ * @param Input input : l'input en entrée
+ * @return char: le label correspondant à la plus grande valeur retournée par l'un des perceptrons
+ */
 
 char NN2::evaluation(Input &input) {
     char labelMax;
@@ -45,8 +51,9 @@ char NN2::evaluation(Input &input) {
 }
 
 /**
- * input : (xj, yj)
- * mu : pas du gradient
+ * @brief Application de l'algorithme d'apprentissage sur un input
+ * @param input &input : (xj, yj)
+ * @param double mu : pas du gradient
  */
 void NN2::apprentissage(Input &input, double mu) {
     Input_intermediaire inputIntermediaire = Input_intermediaire((input).get_label());

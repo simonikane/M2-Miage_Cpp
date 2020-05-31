@@ -1,6 +1,6 @@
 //
 // Created by CRYSTA on 27/05/2020.
-//
+// Permet de représenter un réseau de neurones
 
 #ifndef PROJET_CPP_NN1_H
 #define PROJET_CPP_NN1_H
