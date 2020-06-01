@@ -18,7 +18,7 @@ using namespace std;
 Image::Image(int indice) : Input() {
 
     //Pour un Windows ou Linux
-    string MNIST_folderPath = PROJECT_FOLDER_PATH + "\\Data_Source\\MNIST_training\\"
+    string MNIST_folderPath = PROJECT_FOLDER_PATH + "\\Data_Source\\MNIST_training\\";
 
     //Pour un MacOS
     //string MNIST_folderPath = PROJECT_FOLDER_PATH + "/Data_Source/iris_training/";

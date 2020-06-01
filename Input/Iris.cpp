@@ -34,7 +34,7 @@ vector<std::string> Iris::split(std::string chaine, char delimit) {
    */
 Iris::Iris(int indice) :Input() {
     //Pour un Windows ou Linux
-    string pathFolder = PROJECT_FOLDER_PATH + "\\Data_Source\\iris_training\\"
+    string pathFolder = PROJECT_FOLDER_PATH + "\\Data_Source\\iris_training\\";
 
     //Pour un MacOS
     //string pathFolder = PROJECT_FOLDER_PATH + "/Data_Source/iris_training/";

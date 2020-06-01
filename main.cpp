@@ -25,45 +25,36 @@ int main() {
 }
 
 void testPerceptron() {
-//    Tanh *tanh = new Tanh();
-//    Perceptron *perceptron = new Perceptron(4, tanh, 1);
-//    Input *iris = new Iris(121);
-//
-//
-//    cout << "\n";
-//    perceptron->calcul_delta(*iris);
-//    cout << "result forward : " << perceptron->forward(*iris) << "\n";
-//    cout << "calcul_delta : " << perceptron->get_delta();
 
     NN1 *reseau = new NN1(4, 3);
     Apprentissage<Iris, 150, NN1> apprentissageIris(reseau);
-    apprentissageIris.apprendre_base(1000, 0.01);
+    apprentissageIris.apprendre_base(15000, 0.1);
     int nombreCorrect = apprentissageIris.evaluer();
-    std::cout << "Nombre de bons : " << nombreCorrect << " || " << "Pourcentage de correct : "
+    std::cout << "NN1 | Iris | Nombre d'Iris corrects : " << nombreCorrect << " || " << "Pourcentage de correct : "
               << nombreCorrect / 150.0 * 100 << "% de correct" << "\n";
 
 
-//    NN1 * reseau2 = new NN1(784, 10);
-//    Apprentissage<Image, 60000, NN1> apprentissageImage(reseau2);
-//    apprentissageImage.apprendre_base(10000, 1);
-//    int nombreCorrect2 = apprentissageImage.evaluer();
-//    std::cout << "\nNombre de bons : " << nombreCorrect2 << " || " << "Pourcentage de correct : "
-//              << nombreCorrect2 / 60000.0 * 100 << "% de correct" << "\n";
+    NN1 *reseau2 = new NN1(784, 10);
+    Apprentissage<Image, 60000, NN1> apprentissageImage(reseau2);
+    apprentissageImage.apprendre_base(100000, 1);
+    int nombreCorrect2 = apprentissageImage.evaluer();
+    std::cout << "NN1 | Image | Nombre d'Image corrects : " << nombreCorrect2 << " || " << "Pourcentage de correct : "
+              << nombreCorrect2 / 60000.0 * 100 << "% de correct" << "\n";
 
 
-//    NN2 * reseau3 = new NN2(4, 3, 3);
-//    Apprentissage<Iris, 150, NN2> apprentissageIris2(reseau3);
-//    apprentissageIris2.apprendre_base(1000, 0.01);
-//    int nombreCorrect3 = apprentissageIris2.evaluer();
-//    std::cout << "Nombre de bons : " << nombreCorrect3 << " || " << "Pourcentage de correct : "
-//              << nombreCorrect3 / 150.0 * 100 << "% de correct" << "\n";
+    NN2 *reseau3 = new NN2(4, 3, 3);
+    Apprentissage<Iris, 150, NN2> apprentissageIris2(reseau3);
+    apprentissageIris2.apprendre_base(10000, 0.01);
+    int nombreCorrect3 = apprentissageIris2.evaluer();
+    std::cout << "NN2 | Iris | Nombre d'Iris corrects " << nombreCorrect3 << " || " << "Pourcentage de correct : "
+              << nombreCorrect3 / 150.0 * 100 << "% de correct" << "\n";
 
-//    NN2 * reseau4 = new NN2(784, 10, 10);
-//    Apprentissage<Image, 60000, NN2> apprentissageImage2(reseau4);
-//    apprentissageImage2.apprendre_base(100000, 0.1);
-//    int nombreCorrect4 = apprentissageImage2.evaluer();
-//    std::cout << "\nNombre de bons : " << nombreCorrect4 << " || " << "Pourcentage de correct : "
-//              << nombreCorrect4 / 60000.0 * 100 << "% de correct" << "\n";
+    NN2 *reseau4 = new NN2(784, 10, 10);
+    Apprentissage<Image, 60000, NN2> apprentissageImage2(reseau4);
+    apprentissageImage2.apprendre_base(100000, 0.1);
+    int nombreCorrect4 = apprentissageImage2.evaluer();
+    std::cout << "NN2 | Image | Nombre d'Image corrects " << nombreCorrect4 << " || " << "Pourcentage de correct : "
+              << nombreCorrect4 / 60000.0 * 100 << "% de correct" << "\n";
 }
 
 void printInputs() {
