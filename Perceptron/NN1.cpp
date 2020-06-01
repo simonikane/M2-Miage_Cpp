@@ -36,7 +36,6 @@ char NN1::evaluation(Input &input) {
     for (int i = 0; i < reseauNeurones.size(); i++) {
         double newForward = reseauNeurones.at(i).forward(input);
         // affichage des a(x) calculés
-        // std::cout << "perceptron " << i << "|| newForward " << newForward << "\n";
         if (newForward >= max) {
             max = newForward;
             labelMax = i;

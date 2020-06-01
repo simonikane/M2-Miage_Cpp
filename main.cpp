@@ -70,12 +70,6 @@ void printInputs() {
         iris_vector.push_back(newIris);
     }
 
-/*    for (int i = 0; i < iris_vector.size(); i++) {
-    for (int j = 0; j < 4; j++) {
-        std::cout <<" Iris  " << i << "  "<< iris_vector.at(i)[j]<<"\n";
-    }
-    cout<<"Pour l'iris  "<< i << "  Le label correspondant est "<<iris_vector.at(i).get_label()<<"\n";
-}*/
 
     // Rajouter les training0, training1, [...] training59999 au vecteur d'Images
     for (int indiceImage = 0; indiceImage < 2; indiceImage++) {
@@ -91,17 +85,16 @@ void printInputs() {
         for (int indice_description = 0; indice_description < 4; indice_description++) {
             std::cout << iris_vector.at(i)[indice_description] << "\n";
         }
-        //std::cout << static_cast<unsigned>(iris_vector.at(i).get_label())
-        //<< "\n"; // on fait un static_cast pour transformer la valeur acsii inconnue en vraie valeur
+
     }
 
     // Afficher les données du vecteur d'Images
-
+    // on fait un static_cast pour transformer la valeur acsii inconnue en vraie valeur
     for (int indiceImage = 0; indiceImage < 1; indiceImage++) {
         std::cout << "Label : " << static_cast<unsigned>(image_vector.at(indiceImage).get_label()) << "\n";
         for (int i = 0; i < 700; i++) {
             std::cout << "Nuance de gris du " << i << "eme pixel/indice : " << image_vector.at(indiceImage)[i] << "\n";
-        } // print
+        }
     }
 
 }

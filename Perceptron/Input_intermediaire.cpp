@@ -1,4 +1,3 @@
-//
 // Created by CRYSTA on 29/05/2020.
 // Sert à stocker la valeur des inputs intermédiaires évalués (la première couche)
 

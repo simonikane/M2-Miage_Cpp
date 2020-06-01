@@ -1,4 +1,3 @@
-//
 // Created by DiKeLa M'Babane on 21/05/2020.
 // Partie 2 du projet
 // Permet de définir la structure d'un Perceptron
